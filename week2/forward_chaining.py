@@ -37,6 +37,12 @@ class ExpertSystem:
         #             matched.append(False)
         #
         #     if all(matched):
+        #        print(rule.conclusion)
+        #
+        # Can also be written as:
+        for rule in self.rules:
+            if all(condition in self.facts for condition in rule.conditions):
+                print(rule.conclusion)
 
 # Example usage
 if __name__ == "__main__":
